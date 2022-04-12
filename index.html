@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1">
+		<title>Jogo simples</title>
+        <style>
+			#wrapper{
+				margin: 0 auto;
+				width: 40%;
+			}
+            #game_screen {
+                border: 1px solid #000;
+				background-color: lightblue;
+                image-rendering: pixelated;
+                image-rendering: crisp-edges;
+                image-rendering: -moz-crisp-edges;
+                width: 700px;
+                height: 700px;
+				
+            }
+		</style>
+	</head>
+	<body style="background-color:gray;">
+		<script src="./input/input_listener.js"></script>
+		<script src="./rendering/screen_rendering.js"></script>
+		<script src="./game/game.js"></script>
+
+		<div id="wrapper">
+			<div style="display: flex; margin: 0 auto;">
+				<canvas id="game_screen" width="20" height="20">
+				</canvas>
+			</div>
+			<div style="color: #fff;">
+				<span>Score:</span>
+				<p id="score"></p>
+			</div>
+
+		</div>
+
+
+		<script>
+			const game_state = game();
+			game_state.startGame();
+			const listener = inputListener(document);
+
+			listener.subscribe(game_state.movePiece);
+            screenRendering(document, game_state.struct, requestAnimationFrame);
+
+		</script>
+
+
+	</body>
+	
+</html>
