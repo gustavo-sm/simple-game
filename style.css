@@ -1,0 +1,18 @@
+#wrapper{
+	margin: 0 auto;
+	width: 40%;
+}
+#game_screen {
+  border: 1px solid #000;
+  background-color: lightblue;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  width: 700px;
+  height: 700px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+	#game_screen {
+	  height: 500px;
+	}
+}

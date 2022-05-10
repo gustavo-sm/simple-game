@@ -82,6 +82,8 @@ function game(){
                 struct.score = 0;
                 struct.player.x = 0;
                 struct.player.y = 0;
+                struct.food = {};
+                struct.obstacles = {};
             }
                 
         });
