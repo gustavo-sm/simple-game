@@ -1,5 +1,5 @@
 # simple-game
-
+Feito para fins de aprendizado, utilizando pattern Observer para alcançar desacoplamento entre as entidades do sistema.
 Jogo simples, basta recolher as comidinhas (blocos verdes) e evitar os obstáculos (blocos cinzas).
 > Ao encostar no bloco cinza, o seu score é zerado.
 
